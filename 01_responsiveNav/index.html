@@ -4,20 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Nav Component</title>
-    <link rel="stylesheet" href="style.css" type="text/tailwindcss">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-        @theme {
-            --color-clifford: #da373d;
-        }
-    </style>
+    <link href="./output.css" rel="stylesheet">
 </head>
 
 <body>
-    <h1 class="text-3xl font-bold underline text-clifford bg-cyan-500 text-center m-5">
-        Hello world!
-    </h1>
+    <nav class="flex items-center px-2 py-1.5 justify-between text-xl font-medium mt-2">
+        <a class="company-logo flex items-center justify-center gap-4 pl-2" href="#">
+            <img src="assets/Company-logo.png" alt="logo" class="h-10 w-10 drop-shadow-2xl">
+            <p class="text-2xl">ToDesktop</p>
+        </a>
+        <div class="nav-links flex gap-5 text-gray-700 max-md:hidden">
+            <a href="#" class="hover:text-sky-600">Pricing</a>
+            <a href="#" class="hover:text-sky-600">Docs</a>
+            <a href="#" class="hover:text-sky-600">Changelog</a>
+            <a href="#" class="hover:text-sky-600">Blog</a>
+            <a href="#" class="hover:text-sky-600">Login</a>
+        </div>
+        <button class="mx-2 border-1 border-gray-600 rounded-md px-3 py-0.5 max-md:hidden md:visible">
+            <i class="fa-brands fa-react"></i>
+            <span>Electron Developers</span>
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <button class="md:hidden mx-3 cursor-pointer">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="fixed inset-0 bg-amber-300 ">
+            
+        </div>
+    </nav>
 </body>
 
 </html>
