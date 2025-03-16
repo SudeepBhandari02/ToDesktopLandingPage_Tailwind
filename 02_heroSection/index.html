@@ -1,14 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Nav Component</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body>
-    <h1 class="text-3xl font-bold underline bg-cyan-700 text-white">
-        Hello world!
-      </h1>
+
+    <!-- Nav bar -->
+    <nav class="flex items-center p-4 justify-between text-xl font-medium mt-2">
+
+        <!-- navigation on large screens -->
+        <a class="company-logo flex items-center justify-center gap-4 pl-2" href="#">
+            <img src="assets/Company-logo.png" alt="logo" class="h-10 w-10 drop-shadow-2xl">
+            <p class="text-2xl">ToDesktop</p>
+        </a>
+        <div class="nav-links flex gap-5 text-gray-700 max-lg:hidden">
+            <a href="#" class="hover:text-sky-600">Pricing</a>
+            <a href="#" class="hover:text-sky-600">Docs</a>
+            <a href="#" class="hover:text-sky-600">Changelog</a>
+            <a href="#" class="hover:text-sky-600">Blog</a>
+            <a href="#" class="hover:text-sky-600">Login</a>
+        </div>
+        <a href="https://www.todesktop.com/electron"
+            class="mx-2 border-1 border-gray-500 rounded-md px-3 py-0.5 max-lg:hidden lg:visible cursor-pointer hover:border-gray-800">
+            <i class="fa-brands fa-react"></i>
+            <span>Electron Developers</span>
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <button onclick="navToggle()" class="lg:hidden mx-3 cursor-pointer">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- navigation small screens -->
+        <div class="fixed inset-0 bg-white hidden lg:hidden overflow-hidden" id="smallNav">
+            <div class="flex items-center justify-between p-4 mt-2">
+                <a class="company-logo flex items-center justify-center gap-4 pl-2" href="#">
+                    <img src="assets/Company-logo.png" alt="logo" class="h-10 w-10 drop-shadow-2xl">
+                    <p class="text-2xl">ToDesktop</p>
+                </a>
+                <button class="cursor-pointer mx-3" onclick="navToggle()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <ul class="p-5 flex flex-col gap-8 text-gray-700 border-b border-gray-800 mx-3 my-3 ">
+                <a href="#">Pricing</a>
+                <a href="#">Docs</a>
+                <a href="#">Changelog</a>
+                <a href="#">Blog</a>
+                <a href="#">Login</a>
+            </ul>
+            <div class="my-8 mx-4">
+                <a href="https://www.todesktop.com/electron"
+                    class="mx-2 border-1 border-gray-500 rounded-xl px-6 py-3 cursor-pointer mt- hover:border-gray-800">
+                    <i class="fa-brands fa-react"></i>
+                    <span class="text-xl">Electron Developers</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section  -->
+    <main class="bg-gradient-to-br from-orange-50 via-orange-100 to-transparent min-h-screen ">
+        <div class="hero-container max-w-4xl mx-auto px-8 py-16 flex flex-col gap-10">
+
+            <div
+                class="text-ver flex gap-2 items-center border w-fit px-3 py-0.5 rounded-md border-orange-400 bg-amber-100 group shadow-md hover:shadow-xl hover:-translate-y-1 transition">
+                <div class="bg-yellow-400 h-2 w-2 rounded-full border-2 border-orange-600"></div>
+                <p class="text-yellow-700 text-sm">v0.25.12: <span class="text-orange-700 font-bold">Find-in-page bug
+                        fixes</span></p>
+                <i class="fa-solid fa-arrow-right text-yellow-700 group-hover:translate-x-1 transition"></i>
+            </div>
+
+            <h1 class="text-5xl font-sans font-medium tracking-wide leading-16 lg:text-7xl lg:leading-22">Web app to desktop app in minutes</h1>
+
+            <p class="text-lg text-gray-800 lg:text-2xl">Take your web app codebase and transform it into a cross platform desktop app with native functionality.</p>
+
+            <div class="button-container flex flex-col gap-8 p-6 lg:flex-row lg:justify-center">
+                <button class="bg-sky-600 px-3 py-2 rounded-2xl text-white text-2xl cursor-pointer lg:w-[50%]">Download now</button>
+                <button class="bg-white px-3 py-2 rounded-2xl text-2xl border border-gray-600 cursor-pointer lg:w-[50%]">Read docs</button>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        const smallNav = document.getElementById('smallNav');
+        function navToggle() {
+            smallNav.classList.toggle('hidden');
+        }
+
+    </script>
 </body>
+
 </html>
