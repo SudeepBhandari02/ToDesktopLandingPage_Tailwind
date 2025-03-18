@@ -18,7 +18,7 @@
 
         <!-- navigation on large screens -->
         <a class="company-logo flex items-center justify-center gap-4 pl-2" href="#">
-            <img src="assets/Company-logo.png" alt="logo" class="h-10 w-10 drop-shadow-2xl">
+            <img src="../assets/Company-logo.png" alt="logo" class="h-10 w-10 drop-shadow-2xl">
             <p class="text-2xl">ToDesktop</p>
         </a>
         <div class="nav-links flex gap-5 text-gray-700 max-lg:hidden">
@@ -42,7 +42,7 @@
         <div class="fixed inset-0 bg-white hidden lg:hidden overflow-hidden" id="smallNav">
             <div class="flex items-center justify-between p-4 mt-2">
                 <a class="company-logo flex items-center justify-center gap-4 pl-2" href="#">
-                    <img src="assets/Company-logo.png" alt="logo" class="h-10 w-10 drop-shadow-2xl">
+                    <img src="../assets/Company-logo.png" alt="logo" class="h-10 w-10 drop-shadow-2xl">
                     <p class="text-2xl">ToDesktop</p>
                 </a>
                 <button class="cursor-pointer mx-3" onclick="navToggle()">
@@ -68,8 +68,8 @@
     </nav>
 
     <!-- Hero Section  -->
-    <main class="bg-gradient-to-br from-orange-50 via-orange-100 to-transparent min-h-screen ">
-        <div class="hero-container max-w-4xl mx-auto px-8 py-16 flex flex-col gap-10">
+    <main class="bg-gradient-to-br from-orange-50 via-orange-100 to-transparent min-h-[80vh] text-center">
+        <div class="hero-container max-w-3xl mx-auto px-8 py-16 flex flex-col gap-8 justify-center items-center">
 
             <div
                 class="text-ver flex gap-2 items-center border w-fit px-3 py-0.5 rounded-md border-orange-400 bg-amber-100 group shadow-md hover:shadow-xl hover:-translate-y-1 transition">
@@ -79,13 +79,28 @@
                 <i class="fa-solid fa-arrow-right text-yellow-700 group-hover:translate-x-1 transition"></i>
             </div>
 
+            <div class="hidden lg:flex gap-5  text-gray-600">
+                <div class="flex gap-2 items-center">   
+                    <i class="fa-solid fa-file-code"></i>
+                    <p>Code optional</p>
+                </div>
+                <div class="flex gap-2 items-center">
+                    <i class="fa-regular fa-hand"></i>
+                    <p>Drag & drop builder</p>
+                </div>
+                <div class="flex gap-2 items-center">
+                    <i class="fa-solid fa-window-restore"></i>
+                    <p>Windows, Mac, Linux</p>
+                </div>
+            </div>
+
             <h1 class="text-5xl font-sans font-medium tracking-wide leading-16 lg:text-7xl lg:leading-22">Web app to desktop app in minutes</h1>
 
             <p class="text-lg text-gray-800 lg:text-2xl">Take your web app codebase and transform it into a cross platform desktop app with native functionality.</p>
 
-            <div class="button-container flex flex-col gap-8 p-6 lg:flex-row lg:justify-center">
-                <button class="bg-sky-600 px-3 py-2 rounded-2xl text-white text-2xl cursor-pointer lg:w-[50%]">Download now</button>
-                <button class="bg-white px-3 py-2 rounded-2xl text-2xl border border-gray-600 cursor-pointer lg:w-[50%]">Read docs</button>
+            <div class="button-container flex flex-col gap-8 p-6 lg:flex-row lg:justify-center w-full">
+                <button class="bg-blue-700 font-bold px-3 py-4 rounded-xl text-white text-2xl cursor-pointer lg:w-[30%] hover:bg-blue-600">Download now</button>
+                <button class="bg-white px-3 font-bold py-4 rounded-xl text-2xl border border-gray-500 cursor-pointer lg:w-[30%] hover:border-gray-700 hover:shadow-sm">Read docs</button>
             </div>
 
         </div>
