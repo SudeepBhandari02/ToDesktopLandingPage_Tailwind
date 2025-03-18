@@ -8,5 +8,5 @@ Component 1 is the Nav bar which has been made responsive using tailwind breakpo
 <--------------02------------------>  
 Component 2 is the Hero Section where I have learnt tailwinds active states 
 
-<--------------03------------------>
+<--------------03------------------>  
 Componnet 3 is a Scroll slider section with horizontal sroll animation when scrolled on the page  
