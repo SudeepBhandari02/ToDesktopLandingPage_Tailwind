@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payments</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+  <section class="container p-5 mx-auto">
+    <div class="title flex flex-col gap-10 my-8 lg:flex-row lg:items-center lg:justify-between">
+      <h2 class="text-5xl font-medium">Choose a plan that fits <br> your needs</h2>
+
+      <label for="Toggle4" class="inline-flex rounded-md items-center p-2 w-64 cursor-pointer border-[0.5px] border-gray-200 dark:bg-gray-50 dark:text-gray-900 relative">
+        <input id="Toggle4" type="checkbox" class="hidden peer">
+        <!-- Sliding Background -->
+        <div class="absolute top-2  h-[calc(100%-16px)] w-[45%] rounded-md bg-white shadow-md transition-transform duration-700 ease-in-out peer-checked:translate-x-full"></div>
+        <!-- Stationary Text -->
+        <span class="relative px-4 py-2 w-[50%] text-center z-10">Monthly</span>
+        <span class="relative px-4 py-2 w-[50%] text-center z-10">Yearly</span>
+      </label>
+
+    </div>
+
+    <div class="price-container display flex flex-col gap-5 lg:flex-row lg:gap-10 lg:justify-center lg:items-stretch">
+
+      <div class="free-section flex flex-col gap-5 p-5 border-[1px] border-gray-300 rounded-xl bg-gray-100 lg:w-[30%]">
+        <h3 class="text-3xl font-medium">Free</h3>
+        <p class="text-gray-500 text-lg">For personal use or testing your app before deploying to customers.</p>
+        <div class="features">
+          <span class="text-gray-500 text-lg">KEY FEATURES</span>
+          <ul class="text-gray-900">
+            <li> <i class="fa-solid fa-check"></i> Windows, Mac & Linux</li>
+            <li> <i class="fa-solid fa-check"></i> Automatic Updates</li>
+            <li> <i class="fa-solid fa-xmark"></i> Native Installers</li>
+            <li> <i class="fa-solid fa-xmark"></i> Email/chat support</li>
+          </ul>
+        </div>
+        <div class="price">
+          <span class="text-4xl font-medium">$0</span>
+          <span class="text-gray-500">/month</span>
+        </div>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-md">Get Started</button>
+      </div>
+
+
+      <div class="free-section flex flex-col gap-5 p-5 border-[1px] border-gray-300 rounded-xl bg-gray-100 lg:w-[30%] lg:justify-between">
+        <h3 class="text-3xl font-medium">Essential</h3>
+        <p class="text-gray-500 text-lg">For simple desktop apps.</p>
+        <div class="features">
+          <span class="text-gray-500 text-lg">KEY FEATURES</span>
+          <ul class="text-gray-900">
+            <li> <i class="fa-solid fa-check"></i> Free for Personal Use</li>
+            <li> <i class="fa-solid fa-check"></i> Run App Locally</li>
+            <li> <i class="fa-solid fa-check"></i> No Public Distribution</li>
+            <li> <i class="fa-solid fa-check"></i> No Native Installers</li>
+          </ul>
+        </div>
+        <div class="price">
+          <span class="text-4xl font-medium">$125</span>
+          <span class="text-gray-500">/month</span>
+        </div>
+        <button class="border-1 border-gray-200 text-blue-700 font-bold text-lg hover:border-gray-400 px-4 py-2 rounded-md ">Get Started</button>
+      </div>
+
+
+      <div class="free-section flex flex-col gap-5 p-5 border-[1px] border-gray-300 rounded-xl bg-gray-100 lg:w-[30%] lg:justify-between">
+        <h3 class="text-3xl font-medium">Professional</h3>
+        <p class="text-gray-500 text-lg">For sophisticated desktop apps..</p>
+        <div class="features">
+          <span class="text-gray-500 text-lg">Everything in Essential Plus</span>
+          <ul class="text-gray-900">
+            <li> <i class="fa-solid fa-check"></i> Branded Download Links</li>
+            <li> <i class="fa-solid fa-check"></i> Analytics</li>
+            <li> <i class="fa-solid fa-check"></i> Access to Plugins</li>
+            <li> <i class="fa-solid fa-check"></i> Access to Restricted API</li>
+          </ul>
+        </div>
+        <div class="price">
+          <span class="text-4xl font-medium">$300</span>
+          <span class="text-gray-500">/month</span>
+        </div>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-md ">Get Started</button>
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+</body>
+
+</html>
