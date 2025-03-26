@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    
+    <section class="container p-5 mx-auto my-10">
+        <h2 class="text-5xl font-medium my-8">FAQ</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 items-start gap-6 auto-rows-min">
+
+            <div class="group p-6 bg-gray-100 rounded-lg border-1 border-gray-300">
+                <dt class="flex justify-between items-center cursor-pointer  " aria-controls="faq-1" aria-expanded="false">
+                    <p class="text-xl font-medium">Is ToDesktop For Me?</p>
+                    <i class="fa-solid fa-angle-up"></i>
+                </dt>
+                <dd id="faq-1" class="hidden mt-4">
+                    That depends! If you would like to distribute your web app to your users as a downloadable desktop app then ToDesktop is for you.
+                    If you want to make a desktop app of a website for your personal use, ToDesktop is overkill.
+                </dd>
+            </div>
+            <div class="group p-6 bg-gray-100 rounded-lg border-1 border-gray-300">
+                <dt class="flex justify-between items-center cursor-pointer  " aria-controls="faq-2" aria-expanded="false">
+                    <p class="text-xl font-medium">Is ToDesktop For Me?</p>
+                    <i class="fa-solid fa-angle-up"></i>
+                </dt>
+                <dd id="faq-2" class="hidden mt-4">
+                    That depends! If you would like to distribute your web app to your users as a downloadable desktop app then ToDesktop is for you.
+                    If you want to make a desktop app of a website for your personal use, ToDesktop is overkill.
+                </dd>
+            </div>
+            <div class="group p-6 bg-gray-100 rounded-lg border-1 border-gray-300">
+                <dt class="flex justify-between items-center cursor-pointer  " aria-controls="faq-3" aria-expanded="false">
+                    <p class="text-xl font-medium">Is ToDesktop For Me?</p>
+                    <i class="fa-solid fa-angle-up"></i>
+                </dt>
+                <dd id="faq-3" class="hidden mt-4">
+                    That depends! If you would like to distribute your web app to your users as a downloadable desktop app then ToDesktop is for you.
+                    If you want to make a desktop app of a website for your personal use, ToDesktop is overkill.
+                </dd>
+            </div>
+            <div class="group p-6 bg-gray-100 rounded-lg border-1 border-gray-300">
+                <dt class="flex justify-between items-center cursor-pointer  " aria-controls="faq-4" aria-expanded="false">
+                    <p class="text-xl font-medium">Is ToDesktop For Me?</p>
+                    <i class="fa-solid fa-angle-up"></i>
+                </dt>
+                <dd id="faq-4" class="hidden mt-4">
+                    That depends! If you would like to distribute your web app to your users as a downloadable desktop app then ToDesktop is for you.
+                    If you want to make a desktop app of a website for your personal use, ToDesktop is overkill.
+                </dd>
+            </div>
+            <div class="group p-6 bg-gray-100 rounded-lg border-1 border-gray-300">
+                <dt class="flex justify-between items-center cursor-pointer  " aria-controls="faq-5" aria-expanded="false">
+                    <p class="text-xl font-medium">Is ToDesktop For Me?</p>
+                    <i class="fa-solid fa-angle-up"></i>
+                </dt>
+                <dd id="faq-5" class="hidden mt-4">
+                    That depends! If you would like to distribute your web app to your users as a downloadable desktop app then ToDesktop is for you.
+                    If you want to make a desktop app of a website for your personal use, ToDesktop is overkill.
+                </dd>
+            </div>
+            <div class="group p-6 bg-gray-100 rounded-lg border-1 border-gray-300">
+                <dt class="flex justify-between items-center cursor-pointer  " aria-controls="faq-6" aria-expanded="false">
+                    <p class="text-xl font-medium">Is ToDesktop For Me?</p>
+                    <i class="fa-solid fa-angle-up"></i>
+                </dt>
+                <dd id="faq-6" class="hidden mt-4">
+                    That depends! If you would like to distribute your web app to your users as a downloadable desktop app then ToDesktop is for you.
+                    If you want to make a desktop app of a website for your personal use, ToDesktop is overkill.
+                </dd>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+        const faqs = document.querySelectorAll('.group dt');
+        faqs.forEach(faq => {
+            faq.addEventListener('click', () => {
+                faq.nextElementSibling.classList.toggle('hidden');
+                faq.querySelector('i').classList.toggle('fa-angle-up');
+                faq.querySelector('i').classList.toggle('fa-angle-down');
+            })
+        })
+    </script>
+</body>
+</html>
