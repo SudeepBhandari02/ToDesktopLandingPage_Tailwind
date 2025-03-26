@@ -1,12 +1,65 @@
-This is repo I created as part of learning TailWind and building resposive components of [ToDesktop](https://www.todesktop.com/) Website  
-I am building this website in a incremental way and each folder consists new component along with the previously built components.  
-I am using Tailwind CDN so there is no need to install any dependencies. Just fork and go live.
+# Learning Tailwind - ToDesktop Landing Page
 
-<--------------01------------------>  
-Component 1 is the Nav bar which has been made responsive using tailwind breakpoints.  
+This is a repository I created as part of learning Tailwind and building responsive components of the [ToDesktop](https://www.todesktop.com/) website.
 
-<--------------02------------------>  
-Component 2 is the Hero Section where I have learnt tailwinds active states 
+## How to Use This Repository
+1. Fork the repository.
+2. Clone it to your local machine.
+3. Open the HTML files in a browser to view the site.
 
-<--------------03------------------>  
-Componnet 3 is a Scroll slider section with horizontal sroll animation when scrolled on the page  
+Since this repository uses the Tailwind CDN, there are no dependencies to install. Just make changes to the HTML files, save, and reload in your browser!
+
+You can view the live site [here](https://sudeepbhandari02.github.io/learningTailwind_ToDesktopLandingPage).
+
+---
+
+## Components Overview
+
+### <--------------01------------------>
+**Component 1: Navigation Bar**  
+- A responsive navigation bar built using Tailwind breakpoints.
+
+---
+
+### <--------------02------------------>
+**Component 2: Hero Section**  
+- This section introduces Tailwind's active states.
+
+---
+
+### <--------------03------------------>
+**Component 3: Scroll Slider Section**  
+- A horizontally scrollable slider with animations triggered when scrolling on the page.
+
+---
+
+### <--------------04------------------>
+**Component 4: Bento Grid**  
+- A modern grid system inspired by the bento grid layout. Showcases Tailwind's grid utilities.
+
+---
+
+### <--------------05------------------>
+**Component 5: Payment Section**  
+- A payment interface designed to be simple, clean, and responsive.
+
+---
+
+### <--------------06------------------>
+**Component 6: FAQ Section**  
+- An FAQ section with collapsible questions for improved user interaction and responsiveness.
+
+---
+
+### <--------------07------------------>
+**Component 7: Footer**  
+- A footer section that ties the website together with contact details and important links.
+
+---
+
+## Final Merged Landing Page
+The full merged landing page, which includes all components integrated into a single cohesive design, is available in the `0_FullPage` folder.
+
+---
+
+Happy coding!
