@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDesktop + Tailwind</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    
+    <!-- NavBar-Section  -->
+    <nav class="flex items-center p-4 justify-between text-xl font-medium mt-2">
+
+        <!-- navigation on large screens -->
+        <a class="company-logo flex items-center justify-center gap-4 pl-2" href="#">
+            <img src="assets/Company-logo.png" alt="logo" class="h-10 w-10 drop-shadow-2xl">
+            <p class="text-2xl">ToDesktop</p>
+        </a>
+        <div class="nav-links flex gap-5 text-gray-700 max-lg:hidden">
+            <a href="#" class="hover:text-sky-600">Pricing</a>
+            <a href="#" class="hover:text-sky-600">Docs</a>
+            <a href="#" class="hover:text-sky-600">Changelog</a>
+            <a href="#" class="hover:text-sky-600">Blog</a>
+            <a href="#" class="hover:text-sky-600">Login</a>
+        </div>
+        <a href="https://www.todesktop.com/electron"
+            class="mx-2 border-1 border-gray-500 rounded-md px-3 py-0.5 max-lg:hidden lg:visible cursor-pointer hover:border-gray-800">
+            <i class="fa-brands fa-react"></i>
+            <span>Electron Developers</span>
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <button onclick="navToggle()" class="lg:hidden mx-3 cursor-pointer">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- navigation small screens -->
+        <div class="fixed inset-0 bg-white hidden lg:hidden" id="smallNav">
+            <div class="flex items-center justify-between p-4 mt-2">
+                <a class="company-logo flex items-center justify-center gap-4 pl-2" href="#">
+                    <img src="assets/Company-logo.png" alt="logo" class="h-10 w-10 drop-shadow-2xl">
+                    <p class="text-2xl">ToDesktop</p>
+                </a>
+                <button class="cursor-pointer mx-3" onclick="navToggle()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <ul class="p-5 flex flex-col gap-5 text-gray-700">
+                <a href="#" >Pricing</a>
+                <a href="#" >Docs</a>
+                <a href="#">Changelog</a>
+                <a href="#">Blog</a>
+                <a href="#">Login</a>
+            </ul>
+            <a href="https://www.todesktop.com/electron" class="mx-2 border-1 border-gray-500 rounded-md px-3 py-0.5 cursor-pointer hover:border-gray-800">
+                <i class="fa-brands fa-react"></i>
+                <span>Electron Developers</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero-Section  -->
+    <main class="bg-gradient-to-br from-orange-50 via-orange-100 to-transparent min-h-[80vh] text-center">
+        <div class="hero-container max-w-3xl mx-auto px-8 py-16 flex flex-col gap-8 justify-center items-center">
+
+            <div
+                class="text-ver flex gap-2 items-center border w-fit px-3 py-0.5 rounded-md border-orange-400 bg-amber-100 group shadow-md hover:shadow-xl hover:-translate-y-1 transition">
+                <div class="bg-yellow-400 h-2 w-2 rounded-full border-2 border-orange-600"></div>
+                <p class="text-yellow-700 text-sm">v0.25.12: <span class="text-orange-700 font-bold">Find-in-page bug
+                        fixes</span></p>
+                <i class="fa-solid fa-arrow-right text-yellow-700 group-hover:translate-x-1 transition"></i>
+            </div>
+
+            <div class="hidden lg:flex gap-5  text-gray-600">
+                <div class="flex gap-2 items-center">   
+                    <i class="fa-solid fa-file-code"></i>
+                    <p>Code optional</p>
+                </div>
+                <div class="flex gap-2 items-center">
+                    <i class="fa-regular fa-hand"></i>
+                    <p>Drag & drop builder</p>
+                </div>
+                <div class="flex gap-2 items-center">
+                    <i class="fa-solid fa-window-restore"></i>
+                    <p>Windows, Mac, Linux</p>
+                </div>
+            </div>
+
+            <h1 class="text-5xl font-sans font-medium tracking-wide leading-16 lg:text-7xl lg:leading-22">Web app to desktop app in minutes</h1>
+
+            <p class="text-lg text-gray-800 lg:text-2xl">Take your web app codebase and transform it into a cross platform desktop app with native functionality.</p>
+
+            <div class="button-container flex flex-col gap-8 p-6 lg:flex-row lg:justify-center w-full">
+                <button class="bg-blue-700 font-bold px-3 py-4 rounded-xl text-white text-2xl cursor-pointer lg:w-[30%] hover:bg-blue-600">Download now</button>
+                <button class="bg-white px-3 font-bold py-4 rounded-xl text-2xl border border-gray-500 cursor-pointer lg:w-[30%] hover:border-gray-700 hover:shadow-sm">Read docs</button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ScrollSlider-Section  -->
+    <section class=" flex flex-col gap-4 my-20">
+
+        <div class="flex gap-5 max-lg:gap-2 items-center justify-center mb-20">
+            <img src="assets/arrow.png" alt="arrow" class="-scale-x-100 h-8 w-8">
+            <h2 class="font-bold text-2xl max-lg:text-xl">APPS POWERED BY TODESKTOP</h2>
+            <img src="assets/arrow.png" alt="arrow" class="h-8 w-8">
+        </div>
+
+        <div class="flex items-center gap-5 overflow-x-hidden -ml-14" id="scroll1">
+
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+
+
+        </div>
+
+        <div class="flex gap-5 overflow-x-hidden" id="scroll2">
+
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+
+        </div>
+
+        <div class="flex gap-5 overflow-x-hidden -ml-14 lg:hidden" id="scroll3">
+
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+            <div
+                class="flex flex-col items-center justify-center bg-gray-200 rounded-3xl p-5 gap-5 min-w-[150px] max-lg:p-3 max-lg:gap-2 max-lg:min-w-[100px]">
+                <img src="assets/logo-1.png" alt="logo"
+                    class="max-lg:h-20 max-lg:w-20 h-25 w-25 drop-shadow-2xl rounded-2xl">
+                <p class="text-center text-xl font-medium">DropBox</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- BentoGrid-Section  -->
+    <section class="container w-full mx-auto">
+        <h2 class="font-medium font-sans tracking-wide  lg:text-6xl text-4xl lg:leading-14 ml-8">ToDesktop handles <br/>the details</h2>
+        <div id="grid-container" class="w-full p-6  flex flex-col mt-2 gap-6 lg:grid grid-cols-3">
+            
+            <div class="p-[1px] rounded-2xl bg-gray-200 hover:shadow-sm hover:bg-linear-to-br from-pink-400 via-purple-400 to-yellow-400 col-span-1 row-span-2">
+                <div class="flex gap-3 flex-col justify-center p-5 rounded-2xl bg-gray-50 hover:bg-linear-to-br from-pink-50 via-purple-50 to-yellow-50">
+                    <h3 class="text-center font-medium text-2xl">Native Notifications</h3>
+                    <img class="w-sm self-center" src="assets/bento-notification.avif" alt="notification-img">
+                </div>
+            </div>
+
+            <div class="p-[1px] rounded-2xl bg-gray-200 hover:shadow-sm hover:bg-linear-to-br from-pink-400 via-purple-400 to-yellow-400 col-span-1 row-span-3">
+                <div class="flex gap-3 flex-col justify-center p-5 rounded-2xl bg-gray-50 hover:bg-linear-to-br from-pink-50 via-purple-50 to-yellow-50">
+                    <h3 class="text-center text-2xl font-medium">Auto Updates</h3>
+                    <p class="text-center text-md text-gray-700">We’ll ensure the underlying browser is up to date and deliver performance improvements, security patches, & additional features.</p>
+                    <img class="w-sm self-center" src="assets/bento-notification-2.avif" alt="notification-img">
+                </div>
+            </div>
+
+            <div class="p-[1px] rounded-2xl bg-gray-200 hover:shadow-sm hover:bg-linear-to-br from-pink-400 via-purple-400 to-yellow-400 col-span-1 row-span-2">
+                <div class="flex gap-3 flex-col justify-center p-5 rounded-2xl bg-gray-50 hover:bg-linear-to-br from-pink-50 via-purple-50 to-yellow-50">
+                    <h3 class="text-center font-medium text-2xl">Plugins</h3>
+                    <img class="w-sm self-center" src="assets/bento-notification-3.avif" alt="notification-img">
+                </div>
+            </div>
+
+            <div class="p-[1px] rounded-2xl bg-gray-200 hover:shadow-sm hover:bg-linear-to-br from-pink-400 via-purple-400 to-yellow-400 row-span-3">
+                <div class="flex gap-3 flex-col justify-center p-5 rounded-2xl bg-gray-50 hover:bg-linear-to-br from-pink-50 via-purple-50 to-yellow-50">
+                    <h3 class="text-center text-2xl font-medium">Access to Native APIs</h3>
+                    <p class="text-center text-md text-gray-700">ToDesktop ensures the underlying browser, performance improvements, security patches and additional features are always up to date.</p>
+                    <img class="w-sm self-center" src="assets/bento-notification-4.avif" alt="notification-img">
+                </div>
+            </div>
+
+           
+
+            <div class="p-[1px] rounded-2xl bg-gray-200 hover:shadow-sm hover:bg-linear-to-br from-pink-400 via-purple-400 to-yellow-400 row-span-3">
+                <div class="flex gap-3 flex-col justify-center p-5 rounded-2xl bg-gray-50 hover:bg-linear-to-br from-pink-50 via-purple-50 to-yellow-50">
+                    <h3 class="text-center text-2xl font-medium">Native Installers</h3>
+                    <p class="text-center text-md text-gray-700">We even provide a magic link which will detect your users operating system & download the most up to date version of your app.</p>
+                    <img class="w-sm self-center" src="assets/bento-notification-6.avif" alt="notification-img">
+                </div>
+            </div>
+
+            <div class="p-[1px] rounded-2xl bg-gray-200 hover:shadow-sm hover:bg-linear-to-br from-pink-400 via-purple-400 to-yellow-400 row-span-2">
+                <div class="flex gap-3 flex-col justify-center p-5 rounded-2xl bg-gray-50 pb-0 hover:bg-linear-to-br from-pink-50 via-purple-50 to-yellow-50">
+                    <h3 class="text-center font-medium text-2xl">Customizable look and feel</h3>
+                    <img class="w-sm self-center" src="assets/bento-notification-5.avif" alt="notification-img">
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+
+    <!-- Payments-Section  -->
+    <section class="container p-5 mx-auto">
+        <div class="title flex flex-col gap-10 my-8 lg:flex-row lg:items-center lg:justify-between">
+          <h2 class="text-5xl font-medium">Choose a plan that fits <br> your needs</h2>
+    
+          <label for="Toggle4" class="inline-flex rounded-md items-center p-2 w-64 cursor-pointer border-[0.5px] border-gray-200 dark:bg-gray-50 dark:text-gray-900 relative">
+            <input id="Toggle4" type="checkbox" class="hidden peer">
+            <!-- Sliding Background -->
+            <div class="absolute top-2  h-[calc(100%-16px)] w-[45%] rounded-md bg-white shadow-md transition-transform duration-700 ease-in-out peer-checked:translate-x-full"></div>
+            <!-- Stationary Text -->
+            <span class="relative px-4 py-2 w-[50%] text-center z-10">Monthly</span>
+            <span class="relative px-4 py-2 w-[50%] text-center z-10">Yearly</span>
+          </label>
+    
+        </div>
+    
+        <div class="price-container display flex flex-col gap-5 lg:flex-row lg:gap-10 lg:justify-center lg:items-stretch">
+    
+          <div class="free-section flex flex-col gap-5 p-5 border-[1px] border-gray-300 rounded-xl bg-gray-100 lg:w-[30%]">
+            <h3 class="text-3xl font-medium">Free</h3>
+            <p class="text-gray-500 text-lg">For personal use or testing your app before deploying to customers.</p>
+            <div class="features">
+              <span class="text-gray-500 text-lg">KEY FEATURES</span>
+              <ul class="text-gray-900">
+                <li> <i class="fa-solid fa-check"></i> Windows, Mac & Linux</li>
+                <li> <i class="fa-solid fa-check"></i> Automatic Updates</li>
+                <li> <i class="fa-solid fa-xmark"></i> Native Installers</li>
+                <li> <i class="fa-solid fa-xmark"></i> Email/chat support</li>
+              </ul>
+            </div>
+            <div class="price">
+              <span class="text-4xl font-medium">$0</span>
+              <span class="text-gray-500">/month</span>
+            </div>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-md">Get Started</button>
+          </div>
+    
+    
+          <div class="free-section flex flex-col gap-5 p-5 border-[1px] border-gray-300 rounded-xl bg-gray-100 lg:w-[30%] lg:justify-between">
+            <h3 class="text-3xl font-medium">Essential</h3>
+            <p class="text-gray-500 text-lg">For simple desktop apps.</p>
+            <div class="features">
+              <span class="text-gray-500 text-lg">KEY FEATURES</span>
+              <ul class="text-gray-900">
+                <li> <i class="fa-solid fa-check"></i> Free for Personal Use</li>
+                <li> <i class="fa-solid fa-check"></i> Run App Locally</li>
+                <li> <i class="fa-solid fa-check"></i> No Public Distribution</li>
+                <li> <i class="fa-solid fa-check"></i> No Native Installers</li>
+              </ul>
+            </div>
+            <div class="price">
+              <span class="text-4xl font-medium">$125</span>
+              <span class="text-gray-500">/month</span>
+            </div>
+            <button class="border-1 border-gray-200 text-blue-700 font-bold text-lg hover:border-gray-400 px-4 py-2 rounded-md ">Get Started</button>
+          </div>
+    
+    
+          <div class="free-section flex flex-col gap-5 p-5 border-[1px] border-gray-300 rounded-xl bg-gray-100 lg:w-[30%] lg:justify-between">
+            <h3 class="text-3xl font-medium">Professional</h3>
+            <p class="text-gray-500 text-lg">For sophisticated desktop apps..</p>
+            <div class="features">
+              <span class="text-gray-500 text-lg">Everything in Essential Plus</span>
+              <ul class="text-gray-900">
+                <li> <i class="fa-solid fa-check"></i> Branded Download Links</li>
+                <li> <i class="fa-solid fa-check"></i> Analytics</li>
+                <li> <i class="fa-solid fa-check"></i> Access to Plugins</li>
+                <li> <i class="fa-solid fa-check"></i> Access to Restricted API</li>
+              </ul>
+            </div>
+            <div class="price">
+              <span class="text-4xl font-medium">$300</span>
+              <span class="text-gray-500">/month</span>
+            </div>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-md ">Get Started</button>
+          </div>
+    
+    
+        </div>
+    
+    
+      </section>
+
+    <!-- FAQ-Section  -->
+    <section class="container p-5 mx-auto my-10">
+        <h2 class="text-5xl font-medium my-8">FAQ</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 items-start gap-6 auto-rows-min">
+
+            <div class="group p-6 bg-gray-100 rounded-lg border-1 border-gray-300">
+                <dt class="flex justify-between items-center cursor-pointer  " aria-controls="faq-1" aria-expanded="false">
+                    <p class="text-xl font-medium">Is ToDesktop For Me?</p>
+                    <i class="fa-solid fa-angle-up"></i>
+                </dt>
+                <dd id="faq-1" class="hidden mt-4">
+                    That depends! If you would like to distribute your web app to your users as a downloadable desktop app then ToDesktop is for you.
+                    If you want to make a desktop app of a website for your personal use, ToDesktop is overkill.
+                </dd>
+            </div>
+            <div class="group p-6 bg-gray-100 rounded-lg border-1 border-gray-300">
+                <dt class="flex justify-between items-center cursor-pointer  " aria-controls="faq-2" aria-expanded="false">
+                    <p class="text-xl font-medium">Is ToDesktop For Me?</p>
+                    <i class="fa-solid fa-angle-up"></i>
+                </dt>
+                <dd id="faq-2" class="hidden mt-4">
+                    That depends! If you would like to distribute your web app to your users as a downloadable desktop app then ToDesktop is for you.
+                    If you want to make a desktop app of a website for your personal use, ToDesktop is overkill.
+                </dd>
+            </div>
+            <div class="group p-6 bg-gray-100 rounded-lg border-1 border-gray-300">
+                <dt class="flex justify-between items-center cursor-pointer  " aria-controls="faq-3" aria-expanded="false">
+                    <p class="text-xl font-medium">Is ToDesktop For Me?</p>
+                    <i class="fa-solid fa-angle-up"></i>
+                </dt>
+                <dd id="faq-3" class="hidden mt-4">
+                    That depends! If you would like to distribute your web app to your users as a downloadable desktop app then ToDesktop is for you.
+                    If you want to make a desktop app of a website for your personal use, ToDesktop is overkill.
+                </dd>
+            </div>
+            <div class="group p-6 bg-gray-100 rounded-lg border-1 border-gray-300">
+                <dt class="flex justify-between items-center cursor-pointer  " aria-controls="faq-4" aria-expanded="false">
+                    <p class="text-xl font-medium">Is ToDesktop For Me?</p>
+                    <i class="fa-solid fa-angle-up"></i>
+                </dt>
+                <dd id="faq-4" class="hidden mt-4">
+                    That depends! If you would like to distribute your web app to your users as a downloadable desktop app then ToDesktop is for you.
+                    If you want to make a desktop app of a website for your personal use, ToDesktop is overkill.
+                </dd>
+            </div>
+            <div class="group p-6 bg-gray-100 rounded-lg border-1 border-gray-300">
+                <dt class="flex justify-between items-center cursor-pointer  " aria-controls="faq-5" aria-expanded="false">
+                    <p class="text-xl font-medium">Is ToDesktop For Me?</p>
+                    <i class="fa-solid fa-angle-up"></i>
+                </dt>
+                <dd id="faq-5" class="hidden mt-4">
+                    That depends! If you would like to distribute your web app to your users as a downloadable desktop app then ToDesktop is for you.
+                    If you want to make a desktop app of a website for your personal use, ToDesktop is overkill.
+                </dd>
+            </div>
+            <div class="group p-6 bg-gray-100 rounded-lg border-1 border-gray-300">
+                <dt class="flex justify-between items-center cursor-pointer  " aria-controls="faq-6" aria-expanded="false">
+                    <p class="text-xl font-medium">Is ToDesktop For Me?</p>
+                    <i class="fa-solid fa-angle-up"></i>
+                </dt>
+                <dd id="faq-6" class="hidden mt-4">
+                    That depends! If you would like to distribute your web app to your users as a downloadable desktop app then ToDesktop is for you.
+                    If you want to make a desktop app of a website for your personal use, ToDesktop is overkill.
+                </dd>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer-Section  -->
+    <footer class="bg-gray-800 text-gray-400 text-sm py-6">
+        <div class="container mx-auto px-4 space-y-6 md:space-y-4">
+          <p class="text-center md:text-left">
+            More questions? <a href="#" class="text-blue-400 hover:underline">Visit our docs</a>. 
+            Or <a href="#" class="text-blue-400 hover:underline">send us a message</a>.
+          </p>
+      
+          <div class="flex flex-wrap justify-center md:justify-between space-x-6">
+            <a href="#" class="hover:text-white">Documentation</a>
+            <a href="#" class="hover:text-white">Twitter</a>
+            <a href="#" class="hover:text-white">GitHub</a>
+          </div>
+      
+          <div class="flex flex-wrap justify-center md:justify-between items-center space-y-4 md:space-y-0 md:space-x-4">
+            <div class="flex items-center space-x-2">
+              <img src="assets/Company-logo.png" alt="ToDesktop Logo" class="h-6">
+              <p>ToDesktop</p>
+            </div>
+            
+          </div>
+      
+          <p class="text-center">© 2025 ToDesktop, Inc. All rights reserved.</p>
+        </div>
+      </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
