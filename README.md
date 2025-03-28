@@ -9,7 +9,7 @@ This is a repository I created as part of learning Tailwind and building respons
 
 Since this repository uses the Tailwind CDN, there are no dependencies to install. Just make changes to the HTML files, save, and reload in your browser!
 
-You can view the live site [here](https://sudeepbhandari02.github.io/learningTailwind_ToDesktopLandingPage).
+You can view the live site [here](https://sudeepbhandari02.github.io/ToDesktopLandingPage_Tailwind).
 
 ---
 
